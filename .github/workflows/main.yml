@@ -1,0 +1,21 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js (for example)
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+
+      - name: Run tests
+        run: npm test
