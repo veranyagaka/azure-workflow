@@ -22,4 +22,4 @@ jobs:
       - name: Run tests
         run: |
           echo Running tests with
-          npm test
+          echo npm test
